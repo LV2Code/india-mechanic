@@ -1,13 +1,23 @@
 <?php
-
-define('LARAVEL_START', microtime(true));
-
+if(!empty($_SERVER['REQUEST_URI'])){
+	if(strpos($_SERVER['REQUEST_URI'],'/install') !== false){
+		if(!file_exists(__DIR__.'/../.env')){
+			copy(__DIR__.'/../.env.example',__DIR__.'/../.env');
+		}
+	}
+}
+if (!version_compare(phpversion(), '7.2', '>'))
+{
+    die("Current PHP version: ".phpversion()."<br>You must upgrade PHP version 7.2 and later");
+}
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
  * @package  Laravel
- * @author   Taylor Otwell <taylorotwell@gmail.com>
+ * @author   Taylor Otwell <taylor@laravel.com>
  */
+
+define('LARAVEL_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +27,11 @@ define('LARAVEL_START', microtime(true));
 | Composer provides a convenient, automatically generated class loader for
 | our application. We just need to utilize it! We'll simply require it
 | into the script here so that we don't have to worry about manual
-| loading any of our classes later on. It feels nice to relax.
+| loading any of our classes later on. It feels great to relax.
 |
 */
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +45,7 @@ require __DIR__ . '/../vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__ . '/../bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------

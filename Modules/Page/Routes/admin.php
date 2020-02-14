@@ -1,38 +1,18 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Admin
+ * Date: 7/1/2019
+ * Time: 10:02 AM
+ */
+use Illuminate\Support\Facades\Route;
 
-/** @var Illuminate\Routing\Router $router */
-Route::get('pages', [
-    'as' => 'admin.pages.index',
-    'uses' => 'PageController@index',
-    'middleware' => 'can:admin.pages.index',
-]);
+Route::get('/','PageController@index')->name('page.admin.index');
 
-Route::get('pages/create', [
-    'as' => 'admin.pages.create',
-    'uses' => 'PageController@create',
-    'middleware' => 'can:admin.pages.create',
-]);
+Route::match(['get'],'/create','PageController@create')->name('page.admin.create');
+Route::match(['get'],'/edit/{id}','PageController@edit')->name('page.admin.edit');
 
-Route::post('pages', [
-    'as' => 'admin.pages.store',
-    'uses' => 'PageController@store',
-    'middleware' => 'can:admin.pages.create',
-]);
+Route::post('/store/{id}','PageController@store')->name('page.admin.store');
 
-Route::get('pages/{id}/edit', [
-    'as' => 'admin.pages.edit',
-    'uses' => 'PageController@edit',
-    'middleware' => 'can:admin.pages.edit',
-]);
-
-Route::put('pages/{id}/edit', [
-    'as' => 'admin.pages.update',
-    'uses' => 'PageController@update',
-    'middleware' => 'can:admin.pages.edit',
-]);
-
-Route::delete('pages/{ids?}', [
-    'as' => 'admin.pages.destroy',
-    'uses' => 'PageController@destroy',
-    'middleware' => 'can:admin.pages.destroy',
-]);
+Route::get('/getForSelect2','PageController@getForSelect2')->name('page.admin.getForSelect2');
+Route::post('/bulkEdit','PageController@bulkEdit')->name('page.admin.bulkEdit');

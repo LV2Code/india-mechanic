@@ -1,43 +1,51 @@
 <?php
 
-namespace FleetCart\Providers;
+namespace App\Providers;
 
-use Illuminate\Support\Facades\URL;
+use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Request;
-use Illuminate\Support\ServiceProvider;
-use FloatingPoint\Stylist\StylistServiceProvider;
-use Nwidart\Modules\LaravelModulesServiceProvider;
-use Jackiedo\DotenvEditor\DotenvEditorServiceProvider;
+use Illuminate\Support\ServiceProvider; 
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        Schema::defaultStringLength(191);
-
-        if (Request::secure()) {
-            URL::forceScheme('https');
-        }
-    }
-
-    /**
-     * Register the service provider.
+     * Register any application services.
      *
      * @return void
      */
     public function register()
     {
-        $this->app->register(StylistServiceProvider::class);
-        $this->app->register(LaravelModulesServiceProvider::class);
+        //
+    }
 
-        if (! config('app.installed')) {
-            $this->app->register(DotenvEditorServiceProvider::class);
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot(Request $request)
+    {
+
+        if(env('APP_HTTPS')) {
+            \URL::forceScheme('https');
+        }
+
+        Schema::defaultStringLength(191);
+
+        app()->setLocale('en');
+
+        if(strpos($request->path(),'install') === false  && file_exists(storage_path().'/installed')){
+
+            $locale = $request->segment(1);
+            $languages = \Modules\Language\Models\Language::getActive();
+            $localeCodes = Arr::pluck($languages,'locale');
+            if(in_array($locale,$localeCodes)){
+                app()->setLocale($locale);
+            }else{
+                app()->setLocale(setting_item('site_locale'));
+            }
         }
     }
 }
