@@ -22,6 +22,125 @@
                     'url'        => '/',
                     'item_model' => 'custom',
                     'model_name' => 'Custom',
+                    'children'   => array(
+                        array(
+                            'name'       => 'Home Page',
+                            'url'        => '/',
+                            'item_model' => 'custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Home Hotel',
+                            'url'        => '/page/hotel',
+                            'item_model' => 'custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Home Tour',
+                            'url'        => '/page/tour',
+                            'item_model' => 'custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Home Space',
+                            'url'        => '/page/space',
+                            'item_model' => 'custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Home Car',
+                            'url'        => '/page/car',
+                            'item_model' => 'custom',
+                            'children'   => array(),
+                        ),
+                    ),
+                ),
+                array(
+                    'name'       => 'Hotel',
+                    'url'        => '/hotel',
+                    'item_model' => 'custom',
+                    'model_name' => 'Custom',
+                    'children'   => array(
+                        array(
+                            'name'       => 'Hotel List',
+                            'url'        => '/hotel',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Hotel Map',
+                            'url'        => '/hotel?_layout=map',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Hotel Detail',
+                            'url'        => '/hotel/parian-holiday-villas',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                    ),
+                ),
+                array(
+                    'name'       => 'Tours',
+                    'url'        => '/tour',
+                    'item_model' => 'custom',
+                    'model_name' => 'Custom',
+                    'children'   => array(
+                        array(
+                            'name'       => 'Tour List',
+                            'url'        => '/tour',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Tour Map',
+                            'url'        => '/tour?_layout=map',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Tour Detail',
+                            'url'        => '/tour/paris-vacation-travel',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                    ),
+                ),
+                array(
+                    'name'       => 'Space',
+                    'url'        => '/space',
+                    'item_model' => 'custom',
+                    'model_name' => 'Custom',
+                    'children'   => array(
+                        array(
+                            'name'       => 'Space List',
+                            'url'        => '/space',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Space Map',
+                            'url'        => '/space?_layout=map',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Space Detail',
+                            'url'        => '/space/stay-greenwich-village',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                    ),
                 ),
                 array(
                     'name'       => 'Car',
@@ -43,20 +162,48 @@
                             'model_name' => 'Custom',
                             'children'   => array(),
                         ),
+                        array(
+                            'name'       => 'Car Detail',
+                            'url'        => '/car/vinfast-lux-a20-plus',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
                     ),
                 ),
                 array(
-                    'name'       => 'News And Offers',
-                    'url'        => '/news',
+                    'name'       => 'Pages',
+                    'url'        => '#',
                     'item_model' => 'custom',
                     'model_name' => 'Custom',
-                    'children'   => array(),
-                ),
-                array(
-                    'name'       => 'Become a vendor',
-                    'url'        => '/page/become-a-vendor',
-                    'item_model' => 'custom',
-                    'children'   => array(),
+                    'children'   => array(
+                        array(
+                            'name'       => 'News List',
+                            'url'        => '/news',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'News Detail',
+                            'url'        => '/news/morning-in-the-northern-sea',
+                            'item_model' => 'custom',
+                            'model_name' => 'Custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Location Detail',
+                            'url'        => '/location/paris',
+                            'item_model' => 'custom',
+                            'children'   => array(),
+                        ),
+                        array(
+                            'name'       => 'Become a vendor',
+                            'url'        => '/page/become-a-vendor',
+                            'item_model' => 'custom',
+                            'children'   => array(),
+                        ),
+                    ),
                 ),
                 array(
                     'name'       => 'Contact',
@@ -152,7 +299,7 @@
                         ),
                         array(
                             'name'       => 'ツアー詳細',
-                            'url'        => '/ja/tour/nashik-vacation-travel',
+                            'url'        => '/ja/tour/paris-vacation-travel',
                             'item_model' => 'custom',
                             'model_name' => 'Custom',
                             'children'   => array(),
@@ -203,7 +350,7 @@
                         ),
                         array(
                             'name'       => '場所の詳細',
-                            'url'        => '/ja/location/nashik',
+                            'url'        => '/ja/location/paris',
                             'item_model' => 'custom',
                             'children'   => array(),
                         ),
@@ -240,15 +387,15 @@
                     ],
                     [
                         'name'  => 'admin_email',
-                        'val'   => 'contact@car-trade-value.com',
+                        'val'   => 'contact@bookingcore.com',
                         'group' => "general",
                     ], [
                         'name'  => 'email_from_name',
-                        'val'   => 'Car Trade Value',
+                        'val'   => 'India Mechanic',
                         'group' => "general",
                     ], [
                         'name'  => 'email_from_address',
-                        'val'   => 'contact@car-trade-value.com',
+                        'val'   => 'contact@bookingcore.com',
                         'group' => "general",
                     ],
                     [
@@ -269,17 +416,17 @@
     <a href="#"><i class="fa fa-google-plus"></i></a>
 </div>
 <span class="line"></span>
-<a href="mailto:contact@car-trade-value.com">contact@car-trade-value.com</a>',
+<a href="mailto:contact@bookingcore.com">contact@bookingcore.com</a>',
                         'group' => "general",
                     ],
                     [
                         'name'  => 'footer_text_left',
-                        'val'   => 'Copyright © 2019 by Car Trade Value',
+                        'val'   => 'Copyright © 2019 by India Mechanic',
                         'group' => "general",
                     ],
                     [
                         'name'  => 'footer_text_right',
-                        'val'   => 'Car Trade Value',
+                        'val'   => 'India Mechanic',
                         'group' => "general",
                     ],
                     [
@@ -304,7 +451,7 @@
                     ],
                     [
                         'name' => 'page_contact_desc',
-                        'val' => "<!DOCTYPE html><html><head></head><body><h3>Car Trade Value</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
+                        'val' => "<!DOCTYPE html><html><head></head><body><h3>India Mechanic</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
                         'group' => "general",
                     ],
                     [
@@ -412,7 +559,7 @@
             $banner_image_space = MediaFile::findMediaByName("banner-search-car")->id;
             DB::table('core_templates')->insert([
                 'title'       => 'Home Car',
-                'content'     => '[{"type":"form_search_car","name":"Car: Form Search","model":{"title":"Search Car Deals","sub_title":"Book better cars from local hosts.","bg_image":122},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_featured_item","name":"List Featured Item","model":{"list_item":[{"_active":true,"title":"Free Cancellation","sub_title":"Morbi semper fames lobortis ac","icon_image":103,"order":null},{"_active":true,"title":"No Hidden Costs","sub_title":"Morbi semper fames lobortis","icon_image":104,"order":null},{"_active":true,"title":"24/7 Customer Care","sub_title":"Morbi semper fames lobortis","icon_image":105,"order":null}],"style":"normal"},"component":"RegularBlock","open":true,"is_container":false},{"type":"car_term_featured_box","name":"Car: Term Featured Box","model":{"title":"Browse by categories","desc":"Book incredible things to do around the world.","term_car":["68","67","66","65","64","63","62","61"]},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_car","name":"Car: List Items","model":{"title":"Trending used cars","desc":"Book incredible things to do around the world.","number":8,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"how_it_works","name":"How It Works","model":{"title":"How does it work?","list_item":[{"_active":false,"title":"Find The Car","sub_title":"Lorem Ipsum is simply dummy text of the printing","icon_image":132,"order":null},{"_active":false,"title":"Book It","sub_title":"Lorem Ipsum is simply dummy text of the printing","icon_image":133,"order":null},{"_active":false,"title":"Grab And Go","sub_title":"Lorem Ipsum is simply dummy text of the printing","icon_image":134,"order":null}],"background_image":131},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_locations","name":"List Locations","model":{"service_type":["car"],"title":"We are availabel in ","desc":"Lorem Ipsum is simply dummy text of the printing","number":6,"layout":"style_2","order":"id","order_by":"asc","to_location_detail":""},"component":"RegularBlock","open":true,"is_container":false}]',
+                'content'     => '[{"type":"form_search_car","name":"Car: Form Search","model":{"title":"Search Rental Car Deals","sub_title":"Book better cars from local hosts across the US and around the world.","bg_image":122},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_featured_item","name":"List Featured Item","model":{"list_item":[{"_active":true,"title":"Free Cancellation","sub_title":"Morbi semper fames lobortis ac","icon_image":103,"order":null},{"_active":true,"title":"No Hidden Costs","sub_title":"Morbi semper fames lobortis","icon_image":104,"order":null},{"_active":true,"title":"24/7 Customer Care","sub_title":"Morbi semper fames lobortis","icon_image":105,"order":null}],"style":"normal"},"component":"RegularBlock","open":true,"is_container":false},{"type":"car_term_featured_box","name":"Car: Term Featured Box","model":{"title":"Browse by categories","desc":"Book incredible things to do around the world.","term_car":["68","67","66","65","64","63","62","61"]},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_car","name":"Car: List Items","model":{"title":"Trending used cars","desc":"Book incredible things to do around the world.","number":8,"style":"normal","location_id":"","order":"id","order_by":"desc","is_featured":""},"component":"RegularBlock","open":true,"is_container":false},{"type":"how_it_works","name":"How It Works","model":{"title":"How does it work?","list_item":[{"_active":false,"title":"Find The Car","sub_title":"Lorem Ipsum is simply dummy text of the printing","icon_image":132,"order":null},{"_active":false,"title":"Book It","sub_title":"Lorem Ipsum is simply dummy text of the printing","icon_image":133,"order":null},{"_active":false,"title":"Grab And Go","sub_title":"Lorem Ipsum is simply dummy text of the printing","icon_image":134,"order":null}],"background_image":131},"component":"RegularBlock","open":true,"is_container":false},{"type":"list_locations","name":"List Locations","model":{"service_type":["car"],"title":"Top destinations","desc":"Lorem Ipsum is simply dummy text of the printing","number":6,"layout":"style_2","order":"id","order_by":"asc","to_location_detail":""},"component":"RegularBlock","open":true,"is_container":false}]',
                 'create_user' => '1',
                 'created_at'  => date("Y-m-d H:i:s")
             ]);
@@ -495,7 +642,7 @@
                     ],
                     [
                         'name' => 'page_contact_desc',
-                        'val' => "<!DOCTYPE html><html><head></head><body><h3>Car Trade Value</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
+                        'val' => "<!DOCTYPE html><html><head></head><body><h3>India Mechanic</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>Tell. + 00 222 444 33</p><p>Email. hello@yoursite.com</p><p>1355 Market St, Suite 900San, Francisco, CA 94103 United States</p></body></html>",
                         'group' => "general",
                     ],
                     [
@@ -585,7 +732,7 @@
                     ],
                     [
                         'name'  => "site_title",
-                        'val'   => "Car Trade Value",
+                        'val'   => "India Mechanic",
                         'group' => "general",
                     ],
                 ]
@@ -601,17 +748,17 @@
                 ],
                 [
                     'name' => "site_title",
-                    'val' => "Car Trade Value",
+                    'val' => "India Mechanic",
                     'group' => "general",
 				],
 				[
 					'name'  => "email_header",
-					'val'   => '<h1 class="site-title" style="text-align: center">Car Trade Value</h1>',
+					'val'   => '<h1 class="site-title" style="text-align: center">India Mechanic</h1>',
 					'group' => "general",
 				],
 				[
 					'name'  => "email_footer",
-					'val'   => '<p class="" style="text-align: center">&copy; 2019 Car Trade Value. All rights reserved</p>',
+					'val'   => '<p class="" style="text-align: center">&copy; 2019 India Mechanic. All rights reserved</p>',
 					'group' => "general",
 				],
 				[
@@ -623,9 +770,9 @@
 					'name'  => "user_content_email_registered",
 					'val'   => '<h1 style="text-align: center">Welcome!</h1>
 						<h3>Hello [first_name] [last_name]</h3>
-						<p>Thank you for signing up with Car Trade Value! We hope you enjoy your time with us.</p>
+						<p>Thank you for signing up with India Mechanic! We hope you enjoy your time with us.</p>
 						<p>Regards,</p>
-						<p>Car Trade Value</p>',
+						<p>India Mechanic</p>',
 					'group' => "user",
 				],
 				[
@@ -640,7 +787,7 @@
 						<p>Full name: [first_name] [last_name]</p>
 						<p>Email: [email]</p>
 						<p>Regards,</p>
-						<p>Car Trade Value</p>',
+						<p>India Mechanic</p>',
 					'group' => "user",
 				],
 				[
@@ -652,7 +799,7 @@
 						<p>If you did not request a password reset, no further action is required.
 						</p>
 						<p>Regards,</p>
-						<p>Car Trade Value</p>',
+						<p>India Mechanic</p>',
 					'group' => "user",
 				]
             ]

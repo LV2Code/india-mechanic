@@ -93,6 +93,33 @@ $menus = [
 
 // Modules
 $custom_modules = \Modules\ServiceProvider::getModules();
+
+$custom_modules = [
+    'Booking',
+    'Car',
+    'Contact',
+    'Core',
+    'Dashboard',
+    'Email',
+    // 'Hotel',
+    'Language',
+    'Layout',
+    'Location',
+    'Media',
+    'News',
+    'Page',
+    'Report',
+    'Review',
+    'Service',
+    'Sms',
+    // 'Space',
+    'Template',
+    // 'Tour',
+    'User',
+    'Vendor',
+];
+
+
 if(!empty($custom_modules)){
     foreach($custom_modules as $module){
         $moduleClass = "\\Modules\\".ucfirst($module)."\\ModuleProvider";

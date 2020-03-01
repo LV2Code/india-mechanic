@@ -3,7 +3,6 @@ namespace Modules;
 class ModuleServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 
-
     public static function getAdminMenu(){
         return [];
     }
@@ -45,7 +44,6 @@ class ModuleServiceProvider extends \Illuminate\Support\ServiceProvider
     public static function getActionsHook(){
         return [];
     }
-
     public static function getFiltersHook(){
         return [];
     }

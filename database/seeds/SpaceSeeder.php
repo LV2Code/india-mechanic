@@ -31,7 +31,7 @@ class SpaceSeeder extends Seeder
                 'image_id' => MediaFile::findMediaByName("space-1")->id,
                 'banner_image_id' => MediaFile::findMediaByName('space-single-'.rand(1,3))->id,
                 'location_id' => 2,
-                'address' => "Arrondissement de Nashik",
+                'address' => "Arrondissement de Paris",
                 'is_featured' => rand(0,1),
                 'gallery' => implode(",",$list_gallery),
                 'video' => "https://www.youtube.com/watch?v=UfEiKK-iX70",

@@ -33,6 +33,7 @@ require('./_form');
 require('./_menu');
 
 
+import '../../module/service/app.js';
 import TemplateDetail from '../../module/template/admin/detail.js';
 
 // Template

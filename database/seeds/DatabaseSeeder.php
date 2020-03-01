@@ -20,9 +20,10 @@ class DatabaseSeeder extends Seeder
         $this->call(General::class);
         $this->call(LocationSeeder::class);
         $this->call(News::class);
-        // $this->call(Tour::class);
-        // $this->call(SpaceSeeder::class);
-        // $this->call(HotelSeeder::class);
+        $this->call(Tour::class);
+        $this->call(SpaceSeeder::class);
+        $this->call(HotelSeeder::class);
         $this->call(CarSeeder::class);
     }
 }
+ 

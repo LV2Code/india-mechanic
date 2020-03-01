@@ -8,12 +8,12 @@ $menus = [
         'permission' => 'dashboard_vendor_access',
         'position'   => 10
     ],
-    // 'booking-history' => [
-    //     'url'      => route("vendor.booking_history"),
-    //     'title'    => __("Booking History"),
-    //     'icon'     => 'fa fa-clock-o',
-    //     'position' => 20
-    // ],
+    'booking-history' => [
+        'url'      => route("vendor.booking_history"),
+        'title'    => __("Booking History"),
+        'icon'     => 'fa fa-clock-o',
+        'position' => 20
+    ],
     [
         'url'   => route("user.wishList.index"),
         'title' => __("Wishlist"),
@@ -40,7 +40,6 @@ $menus = [
         'position'   => 60
     ]
 ];
-
 
 // Modules
 $custom_modules = \Modules\ServiceProvider::getModules();

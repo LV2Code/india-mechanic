@@ -72,7 +72,7 @@
                                         </span>
                                             <span class="setting-item-info">
                                             <span class="setting-item-title">{{__("Updater")}}</span>
-                                            <span class="setting-item-desc">{{__("Updater Car Trade Value")}}</span>
+                                            <span class="setting-item-desc">{{__("Updater India Mechanic")}}</span>
                                         </span>
                                         </a>
                                     </div>
@@ -88,7 +88,7 @@
                                         </span>
                                             <span class="setting-item-info">
                                             <span class="setting-item-title">{{__("Plugins")}}</span>
-                                            <span class="setting-item-desc">{{__("Plugins for Car Trade Value")}}</span>
+                                            <span class="setting-item-desc">{{__("Plugins for India Mechanic")}}</span>
                                         </span>
                                         </a>
                                     </div>

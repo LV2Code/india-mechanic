@@ -27,7 +27,7 @@
                     <div class="g-location-module py-5 border-top border-bottom">
                         <div class="row">
                             <div class="col-12 col-lg-5">
-                                <h3>{{__("Explore cars")}}</h3>
+                                <h3>{{__("Explore the place")}}</h3>
                             </div>
                             <div class="col-12 col-lg-7">
                                 <ul class="location-module-nav nav nav-pills justify-content-lg-end">

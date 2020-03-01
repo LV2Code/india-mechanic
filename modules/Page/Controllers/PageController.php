@@ -25,6 +25,9 @@ class PageController extends Controller
 
     public function home()
     {
+        abort(403, 'Work in progress.');
+
+
         $slug = 'car'; // added for car frontend
 
         $page = Page::where('slug', $slug)->first();

@@ -16,6 +16,7 @@
                         @include('Car::frontend.layouts.details.review')
                     </div>
                     <div class="col-md-12 col-lg-3">
+                        @include('Tour::frontend.layouts.details.vendor')
                         @include('Car::frontend.layouts.details.form-book')
                     </div>
                 </div>

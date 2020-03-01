@@ -3,19 +3,10 @@
 @endsection
 <div class="container">
     <div class="bravo-vendor-form-register py-5 @if(!empty($layout)) {{ $layout }} @endif">
-
         <div class="row">
             <div class="col-12 col-lg-5">
                 <h2>{{$title}}</h2>
-                <p class="sub-heading">
-                    {{$desc}}
-                    <div>
-                        <a
-                            href="{{ asset('module/vendor/doc/sample-doc.pdf') }}"
-                            download> Download registration form </a>
-                    </div>
-                </p>
-
+                <p class="sub-heading">{{$desc}}</p>
                 <form class="form bravo-form-register-vendor" method="post" action="{{route('vendor.register')}}">
                     @csrf
 
@@ -54,7 +45,6 @@
                             <div><span class="invalid-feedback error error-g-recaptcha-response"></span></div>
                         </div><!--End form-group-->
                     @endif
-
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary form-submit">
                             {{ __('Sign Up') }}

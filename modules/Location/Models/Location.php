@@ -4,6 +4,7 @@
 
     use App\BaseModel;
     use Kalnoy\Nestedset\NodeTrait;
+    use Modules\Service\Models\Package;
     use Modules\Booking\Models\Bookable;
     use Modules\Media\Helpers\FileHelper;
     use Illuminate\Database\Eloquent\SoftDeletes;
@@ -75,5 +76,9 @@
             $allServices = get_bookable_services();
             $module = new $allServices[$service_type];
             return $module->getLinkForPageSearch(false, ['location_id' => $this->id]);
+        }
+
+        public function packages() {
+            return $this->belongsToMany(Package::class)->withPivot('price');
         }
     }

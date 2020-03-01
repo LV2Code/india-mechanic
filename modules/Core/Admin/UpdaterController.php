@@ -80,7 +80,7 @@ class UpdaterController extends  AdminController
 
         $updater_latest_version = setting_item('updater_latest_version');
         if(empty($updater_latest_version) or version_compare(config('app.version'),$updater_latest_version,'>=')){
-            $this->sendError(__("You are using latest version of Car Trade Value"));
+            $this->sendError(__("You are using latest version of India Mechanic"));
         }
 
         if(!class_exists('\ZipArchive'))

@@ -23,6 +23,7 @@ class ModuleProvider extends ModuleServiceProvider
 
     public static function getAdminMenu()
     {
+        return [];
         $count = VendorPayout::countInitial();
         return [
             'payout'=>[
