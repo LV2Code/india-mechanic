@@ -52,7 +52,8 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('auth.login',['page_title'=> __("Login")]);
+        return view('Page::design.login');
+        // return view('auth.login',['page_title'=> __("Login")]);
     }
 
     public function socialLogin($provider)

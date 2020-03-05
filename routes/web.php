@@ -25,6 +25,7 @@ Auth::routes();
 //Custom User Login and Register
 Route::post('register','\Modules\User\Controllers\UserController@userRegister')->name('auth.register');
 Route::post('login','\Modules\User\Controllers\UserController@userLogin')->name('auth.login');
+
 Route::post('logout','\Modules\User\Controllers\UserController@logout')->name('auth.logout');
 // Social Login
 Route::get('social-login/{provider}', 'Auth\LoginController@socialLogin');

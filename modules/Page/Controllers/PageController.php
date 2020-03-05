@@ -25,6 +25,8 @@ class PageController extends Controller
 
     public function home()
     {
+        return view('Page::design.index');
+
         abort(403, 'Work in progress.');
 
 

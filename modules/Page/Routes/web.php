@@ -11,6 +11,12 @@
 */
 use Illuminate\Support\Facades\Route;
 
+Route::get('/design/{template}', function($template) {
+    return view('Page::design.'.$template);
+});
+
+
+
 // Page
 Route::group(['prefix'=>config('page.page_route_prefix')],function(){
     Route::get('/{slug}','PageController@detail');// Detail

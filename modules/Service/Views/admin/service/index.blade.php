@@ -4,23 +4,23 @@
     <nav class="main-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="http://127.0.0.1:8000/admin">
+                <a href="/admin">
                     <i class="fa fa-home"></i> Dashboard
                 </a>
             </li>
 
             <li class="breadcrumb-item">
-                <a href="http://127.0.0.1:8000/admin/module/car">Services</a>
+                <a href="/admin/module/car">Services</a>
             </li>
 
-            <li class="breadcrumb-item active"> Add Service </li>
+            <li class="breadcrumb-item active"> All Services </li>
         </ol>
     </nav>
 
     <div class="container-fluid">
         <div class="d-flex justify-content-between mb20">
             <div class="">
-                <h1 class="title-bar">Add new service</h1>
+                <h1 class="title-bar">All Services</h1>
             </div>
         </div>
 

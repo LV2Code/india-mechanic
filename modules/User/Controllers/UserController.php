@@ -148,6 +148,10 @@ class UserController extends FrontendController
 
     public function userLogin(Request $request)
     {
+
+        // echo "HERE";
+        // exit();
+
         $rules = [
             'email'    => 'required|email',
             'password' => 'required'
@@ -174,6 +178,7 @@ class UserController extends FrontendController
         } else {
             $email = $request->input('email');
             $password = $request->input('password');
+
             if (Auth::attempt(['email'    => $email,
                                'password' => $password
             ], $request->has('remember'))) {
@@ -188,18 +193,25 @@ class UserController extends FrontendController
 
                 }
 
-                return response()->json([
-                    'error'    => false,
-                    'messages' => false,
-                    'redirect' => $request->input('referer') ?? $request->headers->get('referer') ?? url(app_get_locale(false,'/'))
-                ], 200);
+                return redirect('/admin');
+
+                // return response()->json([
+                //     'error'    => false,
+                //     'messages' => false,
+                //     'redirect' => $request->input('referer') ?? $request->headers->get('referer') ?? url(app_get_locale(false,'/'))
+                // ], 200);
             } else {
-                $errors = new MessageBag(['message_error' => __('Username or password incorrect')]);
-                return response()->json([
-                    'error'    => true,
-                    'messages' => $errors,
-                    'redirect' => false
-                ], 200);
+
+                return redirect()
+                    ->route('login')
+                    ->with('error', 'Username or password incorrect');
+
+                // $errors = new MessageBag(['message_error' => __('Username or password incorrect')]);
+                // return response()->json([
+                //     'error'    => true,
+                //     'messages' => $errors,
+                //     'redirect' => false
+                // ], 200);
             }
         }
     }

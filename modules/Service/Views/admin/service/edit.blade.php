@@ -4,13 +4,13 @@
     <nav class="main-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="http://127.0.0.1:8000/admin">
+                <a href="/admin">
                     <i class="fa fa-home"></i> Dashboard
                 </a>
             </li>
 
             <li class="breadcrumb-item">
-                <a href="http://127.0.0.1:8000/admin/module/car">Services</a>
+                <a href="/admin/module/car">Services</a>
             </li>
 
             <li class="breadcrumb-item active"> Add Service </li>
