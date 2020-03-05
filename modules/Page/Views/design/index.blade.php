@@ -12,7 +12,7 @@
 							<h3>Find Best Packages For</h3>
 							<h2>Car Repair Services</h2>
 							<p><span>Complete Care Of Your Car</span></p>
-							<a class="btn m-btn" href="car-servicing">Book Now<span class="fa fa-angle-right"></span></a>
+							<a class="btn m-btn" href="/design/car-servicing">Book Now<span class="fa fa-angle-right"></span></a>
 						</div>
 					</div>
 				</div>
@@ -23,7 +23,7 @@
 							<h3>Fix Dent On Car</h3>
 							<h2>Car Denting Painting</h2>
 							<p>Starts From <span>@ 1999*</span></p>
-							<a class="btn m-btn" href="car-dent-paint">Book Now<span class="fa fa-angle-right"></span></a>
+							<a class="btn m-btn" href="/design/car-dent-paint">Book Now<span class="fa fa-angle-right"></span></a>
 						</div>
 					</div>
 				</div>
@@ -34,7 +34,7 @@
 							<h3>Clean Your Dirty Car</h3>
 							<h2>Car Cleaning</h2>
 							<p>Starts From <span>@ 199*</span></p>
-							<a class="btn m-btn" href="car-cleaning">Book Now<span class="fa fa-angle-right"></span></a>
+							<a class="btn m-btn" href="/design/car-cleaning">Book Now<span class="fa fa-angle-right"></span></a>
 						</div>
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 							<h3>Issue in car wheel?</h3>
 							<h2>Car Wheel Care</h2>
 							<p>Starts From <span>@ 149*</span></p>
-							<a class="btn m-btn" href="wheel-care">Book Now<span class="fa fa-angle-right"></span></a>
+							<a class="btn m-btn" href="/design/wheel-care">Book Now<span class="fa fa-angle-right"></span></a>
 						</div>
 					</div>
 				</div>
