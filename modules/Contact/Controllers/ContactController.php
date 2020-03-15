@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Matrix\Exception;
+use Modules\Service\Models\Service;
 use Modules\Contact\Emails\NotificationToAdmin;
 use Modules\Contact\Models\Contact;
 use Illuminate\Support\Facades\Validator;
@@ -20,10 +21,18 @@ class ContactController extends Controller
 
     public function index(Request $request)
     {
-        $data = [
-            'page_title' => __("Contact Page")
-        ];
-        return view('Contact::index', $data);
+        return view('Contact::contact', [
+            'services' => Service::all(),
+            'page_title' => "Contact Page",
+        ]);
+    }
+
+    public function about(Request $request)
+    {
+        return view('Contact::about', [
+            'services' => Service::all(),
+            'page_title' => "About Us",
+        ]);
     }
 
     public function store(Request $request)
