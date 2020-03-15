@@ -173,7 +173,7 @@
 							data-wow-delay="0.3s"
 							data-wow-offset="100">
 
-							<a href="car-servicing">
+							<a href="{{ route('service.show', ['id'=>$service->id]) }}">
 								<img
 									class="img-responsive"
 									width="320"
