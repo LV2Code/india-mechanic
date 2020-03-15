@@ -67,9 +67,14 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Service $service)
     {
-        //
+        return view('Service::frontend.single-car-service', [
+            'service' => $service,
+            'services' => Service::all(),
+            'related_services' => Service::where('id', '<>', $service->id)->get()->take(2)
+        ]);
+        // return $service->getGallery();
     }
 
     /**

@@ -65,11 +65,13 @@
                                 <div class="form-group">
                                     <label class="control-label">Banner Image</label>
                                     <div class="form-group-image">
+                                        {{-- <input type="text" value="{{$row->banner_image_id}}" hidden> --}}
                                         {!! \Modules\Media\Helpers\FileHelper::fieldUpload('banner_image_id', $row->banner_image_id) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">{{__("Gallery")}}</label>
+                                        {{-- <input type="text" value="{{$row->gallery}}" hidden> --}}
                                     {!! \Modules\Media\Helpers\FileHelper::fieldGalleryUpload('gallery', $row->gallery) !!}
                                 </div>
                             </div>

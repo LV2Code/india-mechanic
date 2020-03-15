@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Modules\AdminController;
 use Modules\Page\Models\Page;
+use Modules\Service\Models\Service;
 use Modules\Page\Models\PageTranslation;
 
 class PageController extends Controller
@@ -25,26 +26,9 @@ class PageController extends Controller
 
     public function home()
     {
-        return view('Page::design.index');
-
-        abort(403, 'Work in progress.');
-
-
-        $slug = 'car'; // added for car frontend
-
-        $page = Page::where('slug', $slug)->first();
-
-        if (empty($page) || !$page->is_published) {
-            abort(404);
-        }
-        $translation = $page->translateOrOrigin(app()->getLocale());
-        $data = [
-            'row' => $page,
-            'translation' => $translation,
-            'seo_meta'  => $page->getSeoMetaWithTranslation(app()->getLocale(),$translation),
-            'body_class'  => "page",
-        ];
-        return view('Page::frontend.detail', $data);
+        return view('Page::design.index', [
+            'services' => Service::all()
+        ]);
     }
 
     /**

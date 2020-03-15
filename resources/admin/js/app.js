@@ -33,8 +33,7 @@ require('./_form');
 require('./_menu');
 
 
-import '../../module/service/app.js';
-import TemplateDetail from '../../module/template/admin/detail.js';
+require('../../module/service/app.js');
 
 // Template
 if(document.getElementById('booking-core-template-detail')){

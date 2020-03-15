@@ -1,7 +1,11 @@
 @extends('admin.layouts.app')
 @section('content')
 
-    <div class="container-fluid">
+{{-- <example-component></example-component> --}}
+
+    <div
+        id="service-location"
+        class="container-fluid">
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar"> Package Prices </h1>
         </div>

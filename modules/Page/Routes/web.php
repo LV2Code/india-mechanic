@@ -15,6 +15,7 @@ Route::get('/design/{template}', function($template) {
     return view('Page::design.'.$template);
 });
 
+// Route::get('/service/{service}', )
 
 
 // Page
