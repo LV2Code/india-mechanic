@@ -198,7 +198,11 @@
 							<div>
 
 								<div class="col-sm-3 col-xs-12">
-									<a href="car-servicing" class="btn m-btn">View Packages<span class="fa fa-angle-right"></span></a>
+									<a
+										href="{{ route('service.show', ['id'=>$service->id]) }}"
+										class="btn m-btn">
+										View Packages<span class="fa fa-angle-right"></span>
+									</a>
 								</div>
 							</div>
 						</div>
