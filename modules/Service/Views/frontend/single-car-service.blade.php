@@ -193,11 +193,11 @@
 							</header>
 							<div class="b-blog__aside-popular-posts">
 								<div class="b-blog__aside-popular-posts-one">
-									<img class="img-responsive" src="media/services/wheel-care.webp" alt="outlander">
+									<img class="img-responsive" src="{{ asset('design/media/services/wheel-care.webp')}}" alt="outlander">
 									<h4><a href="wheel-care">Car Wheel Care</a></h4>
 								</div>
 								<div class="b-blog__aside-popular-posts-one">
-									<img class="img-responsive" src="media/services/car-servicing.webp" alt="car-denting-painting">
+									<img class="img-responsive" src="{{ asset('design/media/services/car-servicing.webp')}}" alt="car-denting-painting">
 									<h4><a href="car-servicing">Car Servicing</a></h4>
 								</div>
 							</div>
