@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Socialite;
 use App\User;
+use Modules\Service\Models\Service;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
@@ -52,7 +53,10 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('Page::design.login');
+        return view('frontend.login', [
+            'page_title'=> __("Login"),
+            'services' => Service::all()
+        ]);
         // return view('auth.login',['page_title'=> __("Login")]);
     }
 
