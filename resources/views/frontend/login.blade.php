@@ -1,4 +1,4 @@
-@extends('Page::design.layouts.frontend')
+@extends('frontend.layouts.frontend')
 
 @section('content')
 
@@ -7,8 +7,7 @@
 		style="
 			width: 500px;
 		    margin-top: 125px;
-		    margin-bottom: 125px;
-		">
+		    margin-bottom: 125px;">
 
 		<form
 			method="POST"
